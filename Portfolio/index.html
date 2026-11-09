@@ -969,6 +969,9 @@
     height: 340px;
     overflow: hidden;
     perspective: none;
+    touch-action: pan-y; /* FIX: Allows vertical scrolling but captures horizontal swipes */
+    -webkit-user-select: none; /* FIX: Prevents text selection during swipe */
+    user-select: none;
   }
   .spotlight-track{
     position: absolute;
@@ -1262,7 +1265,7 @@
     .thank-you-block{ align-items:flex-start; text-align:start; margin-top: 30px; }
   }
 
-  form{ display:flex; flex-direction: column; gap: 20px; }
+  form{ display:flex; flex-direction:column; gap: 20px; }
   .field{ display:flex; flex-direction:column; gap: 8px; }
   .field label{ font-size: 0.86rem; color: var(--text-dim); }
   .field input, .field textarea{
@@ -2487,6 +2490,9 @@
         renderMobile(mIndex);
       }
       mPaused = false;
+    }, { passive: true });
+    track.parentElement.addEventListener('touchcancel', () => {
+      mPaused = false; // FIX: Ensures autoplay doesn't get stuck if browser interrupts touch
     }, { passive: true });
 
     // =========== DESKTOP ===========
