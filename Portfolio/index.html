@@ -513,8 +513,9 @@
     box-shadow: 0 8px 24px -8px rgba(168,0,248,0.35);
     flex-shrink:0;
     overflow:hidden;
+    padding: 6px; /* padding for SVG icons to fit nicely */
   }
-  .tool-icon-svg{ width: 30px; height: 30px; }
+  .tool-icon-svg{ width: 100%; height: 100%; object-fit: contain; }
   .tool-icon img{ width:100%; height:100%; object-fit:cover; }
   .tool-label{
     display:flex;
@@ -1408,32 +1409,77 @@
     </div>
     <div class="tools-skill-grid">
 
+      <!-- Premiere Pro -->
       <div class="tool-skill reveal" data-percent="95">
-        <div class="tool-icon" data-icon-key="premiere" style="--ti-a:#a800f8; --ti-b:#6b4fa0;"></div>
+        <div class="tool-icon" style="--ti-a:#a800f8; --ti-b:#6b4fa0; font-family: Arial, sans-serif; font-size: 1.6rem; font-weight: 900; color: #fff;">
+          Pr
+        </div>
         <div class="tool-info">
           <div class="tool-label"><b>Adobe Premiere Pro</b><span class="tool-percent">0%</span></div>
           <div class="meter"><i style="width:0%"></i></div>
         </div>
       </div>
 
+      <!-- After Effects -->
       <div class="tool-skill reveal" data-percent="50">
-        <div class="tool-icon" data-icon-key="aftereffects" style="--ti-a:#7a2ee6; --ti-b:#3d1a6e;"></div>
+        <div class="tool-icon" style="--ti-a:#7a2ee6; --ti-b:#3d1a6e; font-family: Arial, sans-serif; font-size: 1.6rem; font-weight: 900; color: #fff;">
+          Ae
+        </div>
         <div class="tool-info">
           <div class="tool-label"><b>Adobe After Effects</b><span class="tool-percent">0%</span></div>
           <div class="meter"><i style="width:0%"></i></div>
         </div>
       </div>
 
+      <!-- CapCut -->
       <div class="tool-skill reveal" data-percent="99">
-        <div class="tool-icon" data-icon-key="capcut" style="--ti-a:#e64ec2; --ti-b:#8a1fa0;"></div>
+        <div class="tool-icon" style="--ti-a:#00f2fe; --ti-b:#4facfe; color: #fff;">
+          <svg class="tool-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd">
+            <path d="M24.189 6.442V2.671l-4.535 2.383V4.91c.002-1.505-1.078-2.411-2.638-2.411H2.64C.993 2.5 0 3.407 0 4.91V8.72L6.354 12 0 15.316v3.8C0 20.595 1 21.5 2.64 21.5h14.373c1.56 0 2.639-.907 2.639-2.382v-.197l4.536 2.409v-3.828L13.64 12 24.19 6.443zM9.982 13.873l7.797 4.083H2.157l7.825-4.083zm7.741-7.828l-7.742 4.057-7.825-4.057h15.567z"/>
+          </svg>
+        </div>
         <div class="tool-info">
           <div class="tool-label"><b>CapCut</b><span class="tool-percent">0%</span></div>
           <div class="meter"><i style="width:0%"></i></div>
         </div>
       </div>
 
+      <!-- Canva -->
       <div class="tool-skill reveal" data-percent="99">
-        <div class="tool-icon" data-icon-key="canva" style="--ti-a:#00c4cc; --ti-b:#5b3ff0;"></div>
+        <div class="tool-icon" style="background: transparent; padding: 0;">
+          <svg class="tool-icon-svg" width="100%" height="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_905_1790)">
+              <path d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z" fill="#7D2AE7"/>
+              <path d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z" fill="url(#paint0_radial_905_1790)"/>
+              <path d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z" fill="url(#paint1_radial_905_1790)"/>
+              <path d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z" fill="url(#paint2_radial_905_1790)"/>
+              <path d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80Z" fill="url(#paint3_radial_905_1790)"/>
+              <path d="M57.2691 48.2052C56.939 48.2052 56.6485 48.484 56.3462 49.0928C52.9323 56.0153 47.0358 60.9134 40.2125 60.9134C32.3228 60.9134 27.437 53.7913 27.437 43.9522C27.437 27.2855 36.7232 17.6491 44.8796 17.6491C48.691 17.6491 51.0186 20.0443 51.0186 23.8559C51.0186 28.3796 48.4485 30.7748 48.4485 32.3702C48.4485 33.0864 48.8939 33.5201 49.7773 33.5201C53.3264 33.5201 57.4918 29.4419 57.4918 23.6808C57.4918 18.0947 52.63 13.9888 44.4737 13.9888C30.994 13.9888 19.0142 26.4858 19.0142 43.777C19.0142 57.1614 26.6572 66.0061 38.45 66.0061C50.9668 66.0061 58.2043 53.5526 58.2043 49.5105C58.2043 48.6153 57.7466 48.2052 57.2691 48.2052Z" fill="white"/>
+            </g>
+            <defs>
+              <radialGradient id="paint0_radial_905_1790" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.453 70.9057) rotate(-49.416) scale(61.8733)">
+                <stop stop-color="#6420FF"/>
+                <stop offset="1" stop-color="#6420FF" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="paint1_radial_905_1790" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(21.1788 9.09457) rotate(54.703) scale(69.7735)">
+                <stop stop-color="#00C4CC"/>
+                <stop offset="1" stop-color="#00C4CC" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="paint2_radial_905_1790" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.4526 70.9053) rotate(-45.1954) scale(61.1242 28.1118)">
+                <stop stop-color="#6420FF"/>
+                <stop offset="1" stop-color="#6420FF" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="paint3_radial_905_1790" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(32.7158 10.7789) rotate(66.5198) scale(62.9836 105.512)">
+                <stop stop-color="#00C4CC" stop-opacity="0.725916"/>
+                <stop offset="0.0001" stop-color="#00C4CC"/>
+                <stop offset="1" stop-color="#00C4CC" stop-opacity="0"/>
+              </radialGradient>
+              <clipPath id="clip0_905_1790">
+                <rect width="80" height="80" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
         <div class="tool-info">
           <div class="tool-label"><b>Canva</b><span class="tool-percent">0%</span></div>
           <div class="meter"><i style="width:0%"></i></div>
